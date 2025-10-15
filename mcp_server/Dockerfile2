@@ -62,8 +62,8 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 # Set up the server application
 WORKDIR /app
-COPY ./server/pyproject.toml ./server/README.md ./server/uv.lock ./
-COPY ./server/graph_service ./graph_service
+# COPY ./server/pyproject.toml ./server/README.md ./server/uv.lock ./
+# COPY ./server/graph_service ./graph_service
 
 # Copy project files for dependency installation (better caching)
 COPY pyproject.toml uv.lock ./
