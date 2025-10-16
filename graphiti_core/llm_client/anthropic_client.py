@@ -216,7 +216,7 @@ class AnthropicClient(LLMClient):
             tools, tool_choice = self._create_tool(response_model)
             result = await self.client.messages.create(
                 system=system_message.content,
-                max_tokens=max_creation_tokens,
+                max_completion_tokens=max_creation_tokens,
                 temperature=self.temperature,
                 messages=user_messages_cast,
                 model=self.model,
